@@ -1,0 +1,25 @@
+server:
+  port: 11131
+  servlet:
+    context-path: /netspeed
+
+spring:
+  datasource:
+    username: transaction_cat
+    password: a!17836933686
+    url: jdbc:mysql://rm-2zemz5c04e8302537jo.mysql.rds.aliyuncs.com:3306/neigou?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.hongang.netspeed.entity,com.hongang.netspeed.common.vo
+
+#showSq
+logging:
+  level:
+    com.hongang.netspeed.dao: debug
+
+#netspeed的app.id为17
+app.id: 17
+
+
